@@ -2,19 +2,17 @@
   "compilerOptions": {
     "module": "NodeNext",
     "strict": true,
-    "esModuleInterop": true,
-    "target": "es6",
+    "esModuleInterop": true, // can use both require and import
+    "target": "es6", // TODO: what should this be..
     "moduleResolution": "NodeNext",
     "sourceMap": true,
     "outDir": "dist",
-    "baseUrl": ".",
-    "skipLibCheck": true,
-    "experimentalDecorators": true,
+    "baseUrl": ".", // base directory to resolve non-relative module names
+    "skipLibCheck": true, // means that it will not check the types of the libraries that are included in the project
     "allowJs": true, // source code can contains ts and js files
-    "noImplicitAny": true, // checks all declared function arguments, they should all have types or at least any as a type.
-    "lib": ["es2015", "es2020"],
+    "lib": ["es2015", "es2020"], // means that the project will use the features of ES2015 and ES2020
     "paths": {
-      "*": ["node_modules/*"]
+      "*": ["node_modules/*"] // allows to use the import statement to import modules from the node_modules directory
     }
   },
   "include": ["src/**/*.ts", "test/**/*.ts"],
